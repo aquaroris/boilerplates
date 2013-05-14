@@ -2,17 +2,33 @@
 % extrafontsizes enables T1 encoding
 \documentclass[a4paper, 12pt, extrafontsizes]{memoir}
 
+\chapterstyle{veelo}
+\renewcommand*{\chapnamefont}{\sffamily\LARGE\flushright}
+\renewcommand*{\chapnumfont}{\sffamily\HUGE}
+\renewcommand*{\chaptitlefont}{\sffamily\HUGE\flushright}
+\renewcommand*{\chaptitlefont}{\sffamily\HUGE\flushright}
+\setsecheadstyle{\Large\sffamily\raggedright}
+\setsubsecheadstyle{\large\sffamily\raggedright}
+\setsubsubsecheadstyle{\sffamily\raggedright}
+\setparaheadstyle{\sffamily\raggedright}
+\setsubparaheadstyle{\sffamily\itshape\raggedright}
+
+\pagenumbering{arabic}
+\pagestyle{ruled}
+\makeevenfoot{ruled}{\sffamily\thepage}{}{}
+\makeoddfoot{ruled}{}{}{\sffamily\thepage}
+\makeevenhead{ruled}{\sffamily\leftmark}{}{}
+\makeoddhead{ruled}{}{}{\sffamily\itshape\rightmark}
+
+
 % Adds hyperlinks to the document
 \usepackage[colorlinks=true]{hyperref}
 % For versions of hyperref pre-2006/11/15,
 % we need to re-modify memoir classes
 \usepackage{memhfixc}
 
-% Puts running headings on each page.
-\pagestyle{headings}
-
 %  environment for multiple columns
-\usepackage{multicol}
+%\usepackage{multicol}
 
 % AMS Math support
 \usepackage{amsmath}
@@ -29,19 +45,27 @@
 % Use New Century Schoolbook with Millenial math
 %\usepackage{millennial}
 % Use New Century Schoolbook with Fourier math
-\usepackage{fouriernc}
+\usepackage{fourier}
 
+% Use utf8 for input encoding
+\usepackage[utf8]{inputenc}
 % Use T1 font encoding instead of OT1 font encoding
+% (also specified by extrafontsizes option in memoir class)
 \usepackage[T1]{fontenc}
+% use hyphenation patterns, etc.
+\usepackage[english]{babel}
+
+% generate lorem ipsum
+\usepackage[math, toc]{blindtext}
 
 \title{Title Goes Here}
 \author{Johannes Choo}
 \date{\today}
 
-%TODO: Add information for tangential discussions.
-
 \begin{document}
 
 \maketitle
+
+\Blinddocument
 
 \end{document}
