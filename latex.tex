@@ -1,0 +1,47 @@
+% option 'landscape', 'a5paper', 'a3paper', etc. also available
+% extrafontsizes enables T1 encoding
+\documentclass[a4paper, 12pt, extrafontsizes]{memoir}
+
+% Adds hyperlinks to the document
+\usepackage[colorlinks=true]{hyperref}
+% For versions of hyperref pre-2006/11/15,
+% we need to re-modify memoir classes
+\usepackage{memhfixc}
+
+% Puts running headings on each page.
+\pagestyle{headings}
+
+%  environment for multiple columns
+\usepackage{multicol}
+
+% AMS Math support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% Provides a key-value interface for the \includegraphics command
+\usepackage{graphicx}
+
+% geometry parameters
+% use option 'landscape' if landscape desired
+%\usepackage[top=1in,bottom=1in,left=0.5in,right=0.5in,a4paper]{geometry}
+
+% Use New Century Schoolbook with Millenial math
+%\usepackage{millennial}
+% Use New Century Schoolbook with Fourier math
+\usepackage{fouriernc}
+
+% Use T1 font encoding instead of OT1 font encoding
+\usepackage[T1]{fontenc}
+
+\title{Title Goes Here}
+\author{Johannes Choo}
+\date{\today}
+
+%TODO: Add information for tangential discussions.
+
+\begin{document}
+
+\maketitle
+
+\end{document}
