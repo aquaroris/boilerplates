@@ -2,6 +2,14 @@
 % extrafontsizes enables T1 encoding
 \documentclass[a4paper, 12pt, extrafontsizes]{memoir}
 
+\pretitle{\scshape\begin{center}\LARGE}
+\posttitle{\par\end{center}\vskip 0.5em}
+\preauthor{\sffamily\begin{center}
+        \large \lineskip 0.5em%
+        \begin{tabular}[t]{c}}
+\postauthor{\end{tabular}\par\end{center}}
+\predate{\sffamily\begin{center}\large}
+\postdate{\par\end{center}}
 \chapterstyle{veelo}
 \renewcommand*{\chapnamefont}{\sffamily\LARGE\flushright}
 \renewcommand*{\chapnumfont}{\sffamily\HUGE}
